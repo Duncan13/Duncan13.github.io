@@ -59,70 +59,144 @@ background-color: pink;
 </nav>
 <div class="container">
 <div class="jumbotron">
+    <p><button onclick="Trans();" class="btn btn-primary">Change text to Tshivenda/English</button></p> 
     <h1 class="text-default">Burial Society</h1>
+    
 <h3 class="text-Primary">Option 1</h3>
-<p class="jumbotro">
+<div class="jumbotro" id="para3">
 R50 nga nwedzi: vha wana Bogisi, Tombstone, Mortuary, Program dza 100. Vha nwalisa vhathu vha 10, ari sedzi minwaha.
-Vha joina namusi vha lovhelwa ria vha vhulungela
-</p>
+Vha joina namusi vha lovhelwa ria vha vhulungela.<br>
+</div>
 
-<h3 class="text-Primary">Option 2</h3>
-<p class="">
-R100 nga nwedzi vha wana Bogisi, Tombstone, Mortuary, Program dza 100. Vha nwalisa vhathu vha 12, ari sedzi minwaha.
-Vha joina namusi vha lovhelwa namusi ria vha vhulungela.
-Ri vha fha R1000 arali vha na minwedzi miraru vho joina.
-</p>
+<h3 class="text-Primary" id="option2">Option 2</h3>
+<div id="para2">
+R100 nga nwedzi vha wana Bogisi, Tombstone, Mortuary, Program dza 100. Vha nwalisa vhathu vha 12, ari sedzi minwaha. Vha joina namusi vha lovhelwa namusi ria vha vhulungela.
+Ri vha fha R1000 arali vha na minwedzi miraru vho joina. <br>
+</div>
 
 <h3 class="text-Primary">Option 3</h3>
-<p class="jumbotro">
-R150 nga nwedzi: vha wana Bogisi, Tombstone, Mortuary, Program dza 100. Vha nwalisa vhathu vha 15. Ari sedzi minwaha.
-Vha joina namusi vha lovhelwa matshelo ria vha vhulungela ra dovha hafhu ra vha fha R1000 tshandani,
-vha dovha wana na zwiliwa(50kg ya mugayo, 5kg sugar, 2 x 5kg braai-pack, bogisi lithihi la magulu, matamatisi, nyala na khavhitshi).
-Fhedzi tshelede na magulu vha zwiwana arali vha na minwedzi miraru vho joiner.
-</p>
+<div class="jumbotro" id="para1">
+R150 nga nwedzi: vha wana Bogisi, Tombstone, Mortuary, Program dza 100. Vha nwalisa vhathu vha 15. Ari sedzi minwaha.Vha joina namusi vha lovhelwa matshelo ria vha vhulungela ra dovha hafhu ra vha fha R1000 tshandani, vha dovha vha wana na zwiliwa(50kg ya mugayo, 5kg sugar, 2 x 5kg braai-pack, bogisi lithihi la magulu, matamatisi, nyala na khavhitshi). Fhedzi tshelede na magulu vha zwiwana arali vha na minwedzi miraru vho joiner.
+</div>
+   
+<!--Javascript-->
+    <script>
+    function Trans(){
+        var text3 = 
+            "R50 nga nwedzi: vha wana Bogisi, Tombstone, Mortuary, Program dza 100. Vha nwalisa vhathu vha 10, ari sedzi minwaha. Vha joina namusi vha lovhelwa ria vha vhulungela.";
+    
+        var text2 = 
+            "R100 nga nwedzi vha wana Bogisi, Tombstone, Mortuary, Program dza 100. Vha nwalisa vhathu vha 12, ari sedzi minwaha. Vha joina namusi vha lovhelwa namusi ria vha vhulungela. Ri vha fha R1000 arali vha na minwedzi miraru vho joina.";
+        
+         var text1 = 
+            "R150 nga nwedzi: vha wana Bogisi, Tombstone, Mortuary, Program dza 100. Vha nwalisa vhathu vha 15. Ari sedzi minwaha.Vha joina namusi vha lovhelwa matshelo ria vha vhulungela ra dovha hafhu ra vha fha R1000 tshandani, vha dovha vha wana na zwiliwa(50kg ya mugayo, 5kg sugar, 2 x 5kg braai-pack, bogisi lithihi la magulu, matamatisi, nyala na khavhitshi). Fhedzi tshelede na magulu vha zwiwana arali vha na minwedzi miraru vho joiner.";
+       
+        var t2 = document.getElementById("para3");
+        var t1 = document.getElementById("para2");
+        var t = document.getElementById("para1");
+        
+        if(t2.innerHTML===text3 && t1.innerHTML===text2 && t.innerHTML===text1){
+            t.innerHTML = "For R150 per month: you get a casket, a Tombstone, we let you use our Mortuary and on top of that you also get 100 programs. 15 people can join under your name on this option. If you join the burial society today and it happens that you or one of the people that joined under your name dies we prepare the burial.<br><b>NB:</b> There's a 3 Months waiting period before you can get the following benefits: R1000 in cash and Groceries which includes 50kg of Maize Meal, 5kg of Sugar, 2 x 5kg Braai-pack, a box of beef tripe, Tomatoes, Onions and Cabbage.";
+            
+            t1.innerHTML = "For R100 per month: you get a casket, a Tombstone, we let you use our Mortuary and on top of that you also get 100 programs. 12 people can join under your name on this option. If you join the burial society today and it happens that you or one of the people that joined under your name dies we prepare the burial. <br><b>NB:</b> You are only capable of getting R1000 in cash only if you have 3 months since you joined the society.";
+            
+            t2.innerHTML = "For R50 per month: you get a coffin, a Tombstone, we let you use our Mortuary and on top of that you also get 100 programs. 10 people can join under your name on this option. If you join the burial society today and it happens that you or one of the people that joined under your name dies we prepare the burial.";
+        }else{
+            t.innerHTML=text1;
+            t1.innerHTML=text2;
+            t2.innerHTML=text3;
+        }
+    }
+    </script>
+<!--Javascript--> 
+    
     
     <h1 class="text-default">Funeral Cover</h1>
     <h3 class="text-primary"></h3>
     <table class="table table-bordered table-responsive-sm">
-    <thead class="thead text-primary">Family Plan up to 84 Years</thead>
+        <thead class="thead text-primary"><b>Family Plan up to 84 Years</b>(<i>1 Plan Cover Up to 8 People</i> )</thead>
         <tbody>
         <tr>
-        <th>YEARS</th>
-        <th>7 Months Waiting Period</th>
+            <th>YEARS</th>
+            <th>7 Months Waiting Period</th>
+            <th>YEARS</th>
+            <th>10 Months Waiting Period</th>
         </tr>
             <tr>
                 <td><b>16-64</b></td>
                 <td>R15 for R1 500</td>
+                <td><b>65-74</b></td>
+                <td>R110 for R5 000</td>
             </tr>
             <tr>
                 <td></td>
                 <td>R30 for R3 000</td>
+                <td></td>
+                <td>R180 for R10 000</td>
             </tr>
             <tr>
                 <td></td>
                 <td>R50 for R5 000</td>
+                <td></td>
+                <td>R270 for R15 000</td>
             </tr>
             <tr>
                 <td></td>
                 <td>R100 for R10 000</td>
+                <td></td>
+                <td>R290 for R20 000</td>
             </tr>
             <tr>
                 <td></td>
                 <td>R140 for R15 000</td>
+                <td></td>
+                <td>R350 for R25 000</td>
             </tr>
             <tr>
                 <td></td>
                 <td>R160 for R20 000</td>
+                <td></td>
+                <td>R380 for R30 000</td>
             </tr>
             <tr>
                 <td></td>
                 <td>R200 for R25 000</td>
+                <td><b>75-84</b></td>
+                <td>R140 for R5 000</td>
             </tr>
             <tr>
                 <td></td>
                 <td>R230 for R30 000</td>
+                <td></td>
+                <td>R260 for R10 000</td>
             </tr>
-        </tbody>
+             <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>R360 for R15 000</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>R380 for R20 000</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>R500 for R25 000</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>R550 for R30 000</td>
+            </tr>
+            
+        </tbody>  
+            
     </table>
     
 </div>
@@ -130,6 +204,6 @@ Fhedzi tshelede na magulu vha zwiwana arali vha na minwedzi miraru vho joiner.
 </body>
     
 <footer style="background-color:pink">
-    <p style>Designed by <a href="tel:+27813134465">Duncan/ +27813134465</a> <br>Send me a message on <a href="https://api.whatsapp.com/send?phone=+27813134465">Whatsapp/ +27813134465</a></p>
+    <p style>Designed by: <a href="tel:+27813134465"><img src="phone.jpg" style="width:40"></a><a href="https://api.whatsapp.com/send?phone=+27813134465"><img src="whatsapp.jpg" style="width:48"></a></p>
 </footer>
 </html>
